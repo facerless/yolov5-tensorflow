@@ -229,9 +229,13 @@ def post_process(inputs,grids,strides,anchor_grid,class_num):
 
 
 if __name__=="__main__":
+    #图像输入尺寸(自行修改)
     input_shape=[800,800]
+    #类别数量(自行修改)
     class_num = 19
+    #参数文件路径
     params_file = r'params.dict'
+    #yolov5模型选择
     model_name='x'# m,l,x
 
     #存储pb的路径
@@ -254,6 +258,7 @@ if __name__=="__main__":
         grids.append(grid)
     # 生成anchor grid
     anchor_gird = []
+    #anchors(自行修改为配置文件中的anchor)
     anchors = [[14,19,23,43,48,33],#14,19,23,43,48,33
                [43,89,90,65,86,173],#43,89,90,65,86,173
                [169,131,228,289,545,476]]#169,131,228,289,545,476
