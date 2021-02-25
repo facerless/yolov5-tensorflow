@@ -34,7 +34,15 @@ def convBnLeakly(input,out_channels,ksize,stride,name,):
     with tf.variable_scope(name):
         net=conv(input,out_channels,ksize,stride)
         net=bn(net)
-        net=tf.nn.sigmoid(net)*net# tf.nn.leaky_relu(net,alpha=0.1)
+        #swish
+        #net=tf.nn.sigmoid(net)*net
+        
+        #v2.0
+        #net=tf.nn.leaky_relu(net,alpha=0.1)
+        
+        #v3.0
+        net=net*tf.nn.relu6(net+3.0)/6.0
+        
         return net
 
 
