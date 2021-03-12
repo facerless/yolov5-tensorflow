@@ -7,5 +7,5 @@ gen_tf_params.py
 
 
 2.转换成tf pb模型  
-目前支持tf1.13  
+目前支持tf1.13，tf1.15
 yolov5_tf.py  
