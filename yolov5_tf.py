@@ -240,7 +240,7 @@ if __name__=="__main__":
     #图像输入尺寸(自行修改)
     input_shape=[800,800]
     #类别数量(自行修改)
-    class_num = 19
+    class_num = 80
     #参数文件路径
     params_file = r'params.dict'
     #yolov5模型选择
